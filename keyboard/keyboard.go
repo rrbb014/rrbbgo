@@ -1,3 +1,4 @@
+// Package keyboard는 키보드로부터 사용자 입력을 읽어옵니다
 package keyboard
 
 import (
@@ -7,6 +8,8 @@ import (
 	"strings"
 )
 
+// GetFloat는 키보드로부터 부동소수점 숫자를 읽어 옵니다.
+// 이 함수는 읽은 숫자와 함께 에러값을 반환합니다.
 func GetFloat() (float64, error) {
 	reader := bufio.NewReader(os.Stdin)
 	input, err := reader.ReadString('\n')
